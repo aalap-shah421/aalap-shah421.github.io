@@ -12,14 +12,7 @@
 <meta property="og:url" content="https://aalap-shah421.github.io/" />
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0e0d'/><text x='8' y='44' font-family='monospace' font-size='32' fill='%234ade80'>%26gt;_</text></svg>" />
 <link rel="stylesheet" href="style.css" />
-<!--
-   ================================================================
-    [hint::00] curious about the source? you have a good instinct.
-    [hint::01] not everything important lives in the rendered DOM.
-    [hint::02] the trail starts at /robots.txt - read carefully.
-    [hint::03] flag format: AALAP{snake_case_thing}
-   ================================================================
--->
+<!-- nice instinct opening view-source. there's a small CTF hidden across this site - start at /robots.txt if you want to find it. AALAP{snake_case_thing} is the format. -->
 </head>
 <body>
 
@@ -39,7 +32,6 @@
 
 <main class="wrap">
 
-  <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="prompt">whoami</div>
     <h1>Aalap Shah</h1>
@@ -59,7 +51,6 @@
     </div>
   </section>
 
-  <!-- ===================== ABOUT ===================== -->
   <section id="about">
     <h2>about <span class="meta">cat ./README.md</span></h2>
     <p>
@@ -84,7 +75,6 @@
     </p>
   </section>
 
-  <!-- ===================== NOW ===================== -->
   <section id="now">
     <h2>now <span class="meta">live status - final season at GMU</span></h2>
     <div class="now-block">
@@ -97,7 +87,6 @@
     </div>
   </section>
 
-  <!-- ===================== PROJECTS ===================== -->
   <section id="projects">
     <h2>featured projects <span class="meta">ls -la ./projects</span></h2>
     <div class="grid">
@@ -162,7 +151,7 @@
           Public collection of writeups for picoCTF, HackTheBox, and TryHackMe
           challenges I've solved - primarily web exploit, OSINT, and forensics.
           A living notebook of what I learned and the techniques worth remembering.
-          <!-- stage-3: this span carries your next breadcrumb. inspect it. -->
+          
           <span id="quiet" data-q="2f2e68696464656e2f7768696368776179">.</span>
         </p>
         <div class="meta"><span>ongoing</span><span>markdown</span></div>
@@ -171,7 +160,6 @@
     </div>
   </section>
 
-  <!-- ===================== EXPERIENCE ===================== -->
   <section id="experience">
     <h2>experience <span class="meta">git log --oneline</span></h2>
     <div class="now-block">
@@ -183,7 +171,6 @@
     </div>
   </section>
 
-  <!-- ===================== SKILLS ===================== -->
   <section id="skills">
     <h2>skills <span class="meta">env | grep TOOLS</span></h2>
     <div class="skill-grid">
@@ -225,7 +212,6 @@
     </div>
   </section>
 
-  <!-- ===================== CERTS ===================== -->
   <section id="certs">
     <h2>certifications</h2>
     <div class="cert-row">
@@ -239,7 +225,6 @@
     </div>
   </section>
 
-  <!-- ===================== BLOG TEASERS ===================== -->
   <section id="writing">
     <h2>recent posts <span class="meta">tail -n 2 ./blog</span></h2>
     <div class="grid post-list" id="post-list">
@@ -248,7 +233,6 @@
     <div style="margin-top:14px"><a href="blog.html">read all posts →</a></div>
   </section>
 
-  <!-- ===================== CONTACT ===================== -->
   <section id="contact" class="contact">
     <h2>contact</h2>
     <p class="dim">recruiters, collaborators, fellow CTF players - pick a channel.</p>
