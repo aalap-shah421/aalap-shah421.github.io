@@ -16,22 +16,12 @@
   LiB0aGF0IGlzIHlvdXIgbmV4dCBVUkwu
 
 ==============================================================
- progressive hints (uncover only as you need them)
+ hint (only if you need it)
 ==============================================================
 
-[hint 1]  the character set { A-Z, a-z, 0-9, +, / } with '='
-          padding is base64. lots of decoders online; on linux
-          try `base64 -d`.
-
-[hint 2]  the decoded text mentions a CSS id you can find on
-          the homepage. it's invisible because its color
-          matches the page background. try selecting all text.
-
-[hint 3]  the element has a `data-q` attribute. that string
-          is hex-encoded ASCII (each pair = one char). decode
-          it to get a relative URL.
+  this character set has 64 symbols. the result speaks for
+  itself - it tells you what to look for and where.
 
 ==============================================================
- still here? remember: AALAP{snake_case_thing} is the format.
- the prize is lunch on me. seriously. keep going.
+ format: AALAP{snake_case_thing}.  prize: lunch on me.
 ==============================================================
