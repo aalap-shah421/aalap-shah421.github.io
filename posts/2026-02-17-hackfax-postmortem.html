@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HackFax x PatriotHacks 2026 - postmortem - Aalap Shah</title>
+<link rel="stylesheet" href="../style.css" />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0e0d'/><text x='8' y='44' font-family='monospace' font-size='32' fill='%234ade80'>%26gt;_</text></svg>" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+    <div class="path">guest@aalap.sh: <span>~/blog/2026-02-17</span></div>
+    <nav class="nav">
+      <a href="../index.html#about">about</a>
+      <a href="../index.html#projects">projects</a>
+      <a href="../blog.html" class="active">blog</a>
+      <a href="../index.html#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="post-body">
+    <h1>HackFax x PatriotHacks 2026: post-mortem</h1>
+    <div class="post-meta">2026-02-17 · 7 min read · ctf · leadership · web-security</div>
+
+    <p>
+      Three years ago I showed up to HackFax as a participant. I solved 50 challenges,
+      got humbled by an OSINT track that needed me to read a Russian PDF, and went home
+      thinking "next year I want to write one of these." This year I led the team that
+      wrote 30 of them. Here is what I learned.
+    </p>
+
+    <h2>The event</h2>
+    <p>
+      <strong>HackFax x PatriotHacks 2026 - Valentine's Day Hackathon + CTF.</strong>
+      36 hours, February 13 to 15, across Dewberry, Horizon, the Johnson Center,
+      and the MIX Media Lab. The hackathon side and the CTF side ran in parallel.
+      You could compete in both. Free, open to all skill levels, fully sponsored.
+    </p>
+    <p>
+      The theme was Valentine's Day, and we leaned into it. The CTF was pink, full of
+      hearts and Cupid and Valentine puns. Challenge names like <em>Unsent Valentine</em>,
+      <em>Cupid's Heartgram</em>, <em>Love in the Source</em>, <em>Locked Letter</em>,
+      <em>The Architect's Love</em>, <em>Cupid Cipher</em>. I wanted the aesthetic to
+      pull beginners in instead of scaring them off.
+    </p>
+
+    <h2>The arc</h2>
+    <p>
+      <strong>2024:</strong> participant. Solved 50 across OSINT, Cyber Principles, Web Attacks.
+      <br><strong>2025:</strong> challenge developer in the Web Attack category.
+      <br><strong>2026:</strong> Web Attack lead. Team of around 10 designers. Six months of
+      build. 30 challenges shipped. Mason's biggest CTF to date.
+    </p>
+
+    <h2>What worked</h2>
+    <ul>
+      <li>
+        <strong>Difficulty pyramid per author.</strong> Each designer shipped an Easy,
+        a Medium, and a Hard. That gave the track a balanced shape and made sure no
+        one author owned the whole "this challenge is impossible" cluster.
+      </li>
+      <li>
+        <strong>Pair-testing before launch.</strong> Every challenge got a "second attacker"
+        who tried to solve it cold without the author in the room. Caught roughly a third
+        of our broken intent ratios. The author always thinks their challenge is fine.
+      </li>
+      <li>
+        <strong>A shared "dirty tricks" doc.</strong> One Notion page with every cheap trick
+        we agreed not to use. Zero-width characters in flags, off-by-one in regex, sub-pixel
+        click targets, hiding flags in the Vercel build log. Saved us a lot of tickets.
+      </li>
+      <li>
+        <strong>Vercel for everything web.</strong> Every challenge was its own static
+        Vercel deployment with a clean URL like <code>hidden-in-plain-sight.vercel.app</code>
+        or <code>cupid-cipher.vercel.app</code>. Zero infra to babysit. Push to ship.
+        Players got fast pages. We got rollbacks for free.
+      </li>
+    </ul>
+
+    <h2>What I would change next time</h2>
+    <ul>
+      <li>
+        <strong>More testers, earlier.</strong> Half our late-stage bugs came from "the only
+        person who tried this challenge was the author." A test rotation in week four would
+        have caught the rest.
+      </li>
+      <li>
+        <strong>Fewer cute tricks.</strong> A challenge that takes 90 minutes because the
+        intended path is brilliant feels great when you solve it and miserable when you do
+        not. The good ones reward thought, not pattern-matching to the author's sense of humor.
+      </li>
+      <li>
+        <strong>Hint economy from day one.</strong> We launched without a hint system, then
+        bolted one on Saturday afternoon when the leaderboard stalled. Should have shipped
+        cost-per-hint balanced against challenge points from the start.
+      </li>
+      <li>
+        <strong>Beginner ramp at the very top of the queue.</strong> The first three
+        challenges a player tries decide whether they stay. Easy challenges should be
+        SO easy that anyone who can use a browser solves one in five minutes. We had this
+        for some authors, not all. <em>Hidden in Plain Sight</em> was the model: open
+        DevTools, read the page title, done. That is the right shape for an entry point.
+      </li>
+    </ul>
+
+    <h2>What it taught me about security work</h2>
+    <p>
+      The thing I did not expect: leading a CTF made me a better defender. When you have
+      spent six months thinking about <em>how</em> to hide a flag in a deliberately broken
+      auth flow, you start seeing the same shapes in real production code. Most of the
+      bugs I have caught at work since then are things that would have been a 200-point
+      challenge.
+    </p>
+
+    <blockquote>
+      The best CTF challenge is one that teaches you to recognize a class of bug, not just
+      to solve a puzzle.
+    </blockquote>
+
+    <h2>Shoutouts</h2>
+    <p>
+      Pavani, Sana, Sri, Nandini, Sandesh, Thomas, Khwaja, Adit, Akshay - this track is
+      yours. You built it. The Cybersecurity GMU board kept the lights on. The HackFax
+      and PatriotHacks execs ran an event of this size with grace. Sponsors fed everyone.
+    </p>
+    <p>
+      See you in 2027.
+    </p>
+
+    <p class="dim" style="margin-top:32px">- Aalap</p>
+    <p style="margin-top:24px"><a href="../blog.html">← back to blog</a></p>
+  </article>
+</main>
+</body>
+</html>
