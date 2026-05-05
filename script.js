@@ -1,13 +1,5 @@
-/* =========================================================
-   aalap.sh - main script
-   - typewriter hero
-   - blog teaser loader
-   - last-updated timestamp
-   - CTF stage 0 (devtools breadcrumb)
-   ========================================================= */
-
 (() => {
-  // ---------- typewriter ----------
+  // typewriter
   const lines = [
     "$ ./skills --top",
     "  > web exploitation, SOC tooling, prompt-injection research",
@@ -38,7 +30,7 @@
     setTimeout(tick, 400);
   }
 
-  // ---------- blog teasers ----------
+  // blog teasers
   const list = document.getElementById("post-list");
   if (list) {
     fetch("posts/index.json")
@@ -62,7 +54,7 @@
       });
   }
 
-  // ---------- CTF stage 0: devtools console ----------
+  // console banner
   const banner = [
     "%c┌──────────────────────────────────────────────────────┐",
     "%c│  hey. you opened devtools. that's already a clue.    │",
@@ -85,7 +77,7 @@
   const styleB = "color:#22d3ee;font-family:monospace;font-size:12px";
   console.log(banner.join("\n"), ...banner.map((_, i) => i >= banner.length - 2 ? styleB : styleA));
 
-  // ---------- last-updated freshness indicator ----------
+  // last-updated freshness
   const lu = document.getElementById("last-updated");
   if (lu) {
     const d = new Date(lu.textContent);
