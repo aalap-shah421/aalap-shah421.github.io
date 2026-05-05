@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Final season at Mason - Aalap Shah</title>
+<link rel="stylesheet" href="../style.css" />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0e0d'/><text x='8' y='44' font-family='monospace' font-size='32' fill='%234ade80'>%26gt;_</text></svg>" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+    <div class="path">guest@aalap.sh: <span>~/blog/2026-05-05</span></div>
+    <nav class="nav">
+      <a href="../index.html#about">about</a>
+      <a href="../index.html#projects">projects</a>
+      <a href="../blog.html" class="active">blog</a>
+      <a href="../index.html#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="post-body">
+    <h1>Final season at Mason: what I'm shipping before finals</h1>
+    <div class="post-meta">2026-05-05 · 4 min read · life · ctf · ai-security</div>
+
+    <p>
+      It's the first week of May. Spring 2026 finals start next Monday. I'm typing this between
+      a CompTIA Network+ practice block and a 6pm shift at Station 22, so this is going to be more
+      "field notes" than "polished essay" - but here's where my head is at.
+    </p>
+
+    <h2>What's on my plate</h2>
+    <ul>
+      <li><strong>Operating Systems</strong> final - review thread on synchronization primitives, paging, and a decent chunk of file system internals.</li>
+      <li><strong>Secure RF Communications</strong> - final project on side-channel leakage from poorly shielded SDR rigs.</li>
+      <li><strong>Digital Electronics</strong> - Verilog lab demo on Wednesday.</li>
+      <li><strong>Systems Engineering Principles</strong> - group writeup, mostly done.</li>
+      <li>Two side projects (see below) and a CTF post-mortem I owe my team.</li>
+    </ul>
+
+    <h2>Side projects</h2>
+    <p>
+      I'm using finals stress as a reason to <em>start</em> two things instead of finishing them
+      (this is bad time management, do not copy):
+    </p>
+    <ul>
+      <li>
+        <strong>PromptShield</strong> - a CLI scanner that takes prompts headed to an LLM and
+        flags injection patterns. It's mostly heuristics right now (instruction overrides,
+        role-confusion, encoded payloads) but I want to add a small classifier trained on the
+        public PromptInjection benchmarks. Why I care: every company I've talked to about
+        AI security is still using <code>if "ignore previous" in prompt</code>. We can do better.
+      </li>
+      <li>
+        <strong>HoneyJar</strong> - a $5 honeypot. Drop it on a VPS, point ports 22/23/445 at it,
+        get a Discord webhook every time something interesting hits. Built because tuning SIEM
+        rules at Mindboard taught me that the cleanest detection signal is "stuff nobody should
+        be touching."
+      </li>
+    </ul>
+
+    <h2>CTF post-mortem (coming next week)</h2>
+    <p>
+      I owe my HackFax × PatriotHacks team a writeup of what worked and what didn't from this
+      year's Web Attack track. Short version: <strong>more testers, fewer cute tricks, and please
+      stop hiding flags in things that require sub-pixel mouse precision</strong>. Longer version
+      next post.
+    </p>
+
+    <h2>Recruiting</h2>
+    <p>
+      I'm actively interviewing for Summer 2026 internships - SOC analyst, AppSec, AI security,
+      and GRC are all on the table. If your team is hiring (or you know someone whose team is),
+      <a href="mailto:Aalap421@gmail.com">say hi</a>. Resume's in the nav.
+    </p>
+
+    <p class="dim" style="margin-top:32px">- Aalap</p>
+    <p style="margin-top:24px"><a href="../blog.html">← back to blog</a></p>
+  </article>
+</main>
+</body>
+</html>

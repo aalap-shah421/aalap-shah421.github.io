@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "2026-05-05-final-season-at-mason",
+    "title": "Final season at Mason: what I'm shipping before finals",
+    "date": "2026-05-05",
+    "tags": ["life", "ctf", "ai-security"],
+    "excerpt": "Spring 2026 finals are a week out. Here's what I'm balancing - Operating Systems, Secure RF, an EMT shift schedule, two side projects, and one CTF post-mortem.",
+    "read": "4 min"
+  },
+  {
+    "slug": "2026-04-28-hackfax-postmortem",
+    "title": "HackFax × PatriotHacks: building Mason's biggest CTF",
+    "date": "2026-04-28",
+    "tags": ["ctf", "leadership", "web-security"],
+    "excerpt": "30+ Web Attack challenges. 11 challenge designers. 6 months of late nights. What I learned leading the largest CTF GMU has ever run.",
+    "read": "6 min"
+  }
+]

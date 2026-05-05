@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aalap Shah - Cybersecurity Engineering @ GMU</title>
+<meta name="description" content="Aalap Shah - Cybersecurity Engineering student at George Mason University, CTF Web Attack Lead, EMT, builder of security tools and AI-adjacent projects." />
+<meta name="author" content="Aalap Shah" />
+<meta property="og:title" content="Aalap Shah - Cybersecurity Engineering @ GMU" />
+<meta property="og:description" content="CTF Web Attack Lead. SOC analyst in training. Builder. EMT. Eagle Scout." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aalap-shah421.github.io/" />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0e0d'/><text x='8' y='44' font-family='monospace' font-size='32' fill='%234ade80'>%26gt;_</text></svg>" />
+<link rel="stylesheet" href="style.css" />
+<!--
+   ================================================================
+    [hint::00] curious about the source? you have a good instinct.
+    [hint::01] not everything important lives in the rendered DOM.
+    [hint::02] the trail starts at /robots.txt - read carefully.
+    [hint::03] flag format: AALAP{snake_case_thing}
+   ================================================================
+-->
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+    <div class="path">guest@aalap.sh: <span>~/portfolio</span></div>
+    <nav class="nav">
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#now">now</a>
+      <a href="blog.html">blog</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="prompt">whoami</div>
+    <h1>Aalap Shah</h1>
+    <div class="role">
+      <span>Cybersecurity Engineering Student</span>
+      <span class="sep">|</span>
+      <span>CTF Web Attack Lead</span>
+      <span class="sep">|</span>
+      <span>EMT</span>
+    </div>
+    <div class="typed-line"><span id="typed"></span><span class="cursor"></span></div>
+    <div class="actions">
+      <a class="btn" href="#projects">view projects</a>
+      <a class="btn cyan" href="assets/resume.pdf" download>download resume</a>
+      <a class="btn dim" href="https://github.com/aalap-shah421" target="_blank" rel="noopener">github ↗</a>
+      <a class="btn dim" href="https://www.linkedin.com/in/aalapshah421/" target="_blank" rel="noopener">linkedin ↗</a>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <h2>about <span class="meta">cat ./README.md</span></h2>
+    <p>
+      I'm a Cybersecurity Engineering student at <strong>George Mason University</strong>
+      (graduating 2027), currently serving as <strong>President of Cybersecurity GMU</strong>
+      and <strong>President of AWS GMU</strong>. I lead the Web Attack category for
+      <strong>HackFax × PatriotHacks</strong> - Mason's largest CTF - where my team of 11
+      built 30+ challenges over six months for the biggest event the university has ever run.
+    </p>
+    <p>
+      By day I work as a Security Professional at a Tier III+ <strong>QTS Data Center</strong>
+      campus, monitoring access control, running vulnerability checks, and triaging incidents.
+      Before that I was a Network Specialist at <strong>Mindboard</strong>, building incident
+      response playbooks, helping tune SIEM detections, and supporting NIST 800-53 / ISO 27001
+      controls. I picked up <strong>CompTIA Security+</strong> and <strong>A+</strong> along
+      the way, and I'm a <strong>volunteer EMT</strong> with Arcola Volunteer Fire Department
+      in Loudoun County's combined fire and rescue system. Eagle Scout, Troop 761.
+    </p>
+    <p class="dim">
+      tl;dr - I like building things, breaking things on purpose, and showing up when
+      people need help.
+    </p>
+  </section>
+
+  <!-- ===================== NOW ===================== -->
+  <section id="now">
+    <h2>now <span class="meta">live status - final season at GMU</span></h2>
+    <div class="now-block">
+      <div class="now-line"><span class="key">▸ semester</span><span class="val">Spring 2026 - finals week incoming</span></div>
+      <div class="now-line"><span class="key">▸ courses</span><span class="val">Operating Systems, Secure RF Communications, Digital Electronics, Systems Engineering Principles</span></div>
+      <div class="now-line"><span class="key">▸ building</span><span class="val"><span class="pulse"></span>PromptShield - a prompt-injection scanner for LLM apps</span></div>
+      <div class="now-line"><span class="key">▸ studying</span><span class="val">working toward CompTIA Network+ → eJPT</span></div>
+      <div class="now-line"><span class="key">▸ on call</span><span class="val">EMT shifts at Station 22 (Arcola)</span></div>
+      <div class="now-line"><span class="key">▸ recruiting</span><span class="val">Summer 2026 internships - open to SOC, AppSec, AI security, GRC</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <h2>featured projects <span class="meta">ls -la ./projects</span></h2>
+    <div class="grid">
+
+      <article class="card">
+        <div class="tag-row">
+          <span class="tag green">shipped</span>
+          <span class="tag">CTF</span>
+          <span class="tag">leadership</span>
+          <span class="tag">web-security</span>
+        </div>
+        <h3><a href="#projects">HackFax × PatriotHacks - Web Attack Lead</a></h3>
+        <p class="desc">
+          Led an 11-person team over six months to design 30+ Web Attack challenges
+          for the largest CTF George Mason has ever hosted. Owned challenge architecture,
+          difficulty calibration, and infrastructure across OSINT, networking, and webapp
+          exploit categories. Went from participant (2024) → developer (2025) → lead (2026).
+        </p>
+        <div class="meta"><span>2026 · GMU</span><span>30+ challenges</span></div>
+      </article>
+
+      <article class="card">
+        <div class="tag-row">
+          <span class="tag yellow">in-dev</span>
+          <span class="tag">AI security</span>
+          <span class="tag">python</span>
+        </div>
+        <h3><a href="https://github.com/aalap-shah421" target="_blank" rel="noopener">PromptShield</a></h3>
+        <p class="desc">
+          A CLI + tiny web UI that scans LLM prompts for known injection patterns
+          (instruction overrides, role-confusion, encoded payloads, indirect injection
+          via tool output). Pattern library + heuristics + a small classifier. Built
+          for AppSec teams shipping LLM features.
+        </p>
+        <div class="meta"><span>2026 · personal</span><span>python · fastapi</span></div>
+      </article>
+
+      <article class="card">
+        <div class="tag-row">
+          <span class="tag yellow">in-dev</span>
+          <span class="tag">blue team</span>
+          <span class="tag">detection</span>
+        </div>
+        <h3><a href="https://github.com/aalap-shah421" target="_blank" rel="noopener">HoneyJar</a></h3>
+        <p class="desc">
+          A lightweight honeypot you can drop on a $5 VPS. Listens on commonly-probed
+          ports (22, 23, 80, 445), logs attacker IPs, captured commands, and credential
+          attempts, then ships structured events to a webhook (Discord / Slack / SIEM).
+          Inspired by my SIEM tuning work at Mindboard.
+        </p>
+        <div class="meta"><span>2026 · personal</span><span>python · docker</span></div>
+      </article>
+
+      <article class="card">
+        <div class="tag-row">
+          <span class="tag green">shipped</span>
+          <span class="tag">CTF</span>
+          <span class="tag">writeups</span>
+        </div>
+        <h3><a href="https://github.com/aalap-shah421" target="_blank" rel="noopener">CTF Writeups</a></h3>
+        <p class="desc">
+          Public collection of writeups for picoCTF, HackTheBox, and TryHackMe
+          challenges I've solved - primarily web exploit, OSINT, and forensics.
+          A living notebook of what I learned and the techniques worth remembering.
+          <!-- stage-3: this span carries your next breadcrumb. inspect it. -->
+          <span id="quiet" data-q="2f2e68696464656e2f7768696368776179">.</span>
+        </p>
+        <div class="meta"><span>ongoing</span><span>markdown</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience">
+    <h2>experience <span class="meta">git log --oneline</span></h2>
+    <div class="now-block">
+      <div class="now-line"><span class="key">▸ now</span><span class="val">Security Professional · QTS Data Centers · Ashburn, VA</span></div>
+      <div class="now-line"><span class="key">▸ now</span><span class="val">EMT · Arcola Volunteer Fire Dept · Loudoun County, VA</span></div>
+      <div class="now-line"><span class="key">▸ 2025</span><span class="val">Network Specialist · Mindboard, Inc. (SIEM, IR playbooks, NIST 800-53)</span></div>
+      <div class="now-line"><span class="key">▸ 2023-25</span><span class="val">Field Service Technician · Tech Systems Inc. (HUGS sysadmin, networking)</span></div>
+      <div class="now-line"><span class="key">▸ 2022-23</span><span class="val">Network Support Technician · eLaunchers (firewall, IDS, patch mgmt)</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills">
+    <h2>skills <span class="meta">env | grep TOOLS</span></h2>
+    <div class="skill-grid">
+      <div class="skill-block">
+        <h4>Security · Networking</h4>
+        <div class="pills">
+          <span class="pill">SIEM</span><span class="pill">Incident Response</span>
+          <span class="pill">Vuln Assessment</span><span class="pill">Network Security</span>
+          <span class="pill">Firewalls</span><span class="pill">IDS/IPS</span>
+          <span class="pill">Patch Mgmt</span><span class="pill">Access Control</span>
+          <span class="pill">Burp Suite</span><span class="pill">Wireshark</span>
+          <span class="pill">Nmap</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Frameworks · Compliance</h4>
+        <div class="pills">
+          <span class="pill">NIST 800-53</span><span class="pill">ISO 27001</span>
+          <span class="pill">RMF</span><span class="pill">Risk Assessment</span>
+          <span class="pill">Policy Dev</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Programming · Scripting</h4>
+        <div class="pills">
+          <span class="pill">Python</span><span class="pill">PowerShell</span>
+          <span class="pill">C#</span><span class="pill">Bash</span>
+          <span class="pill">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Platforms</h4>
+        <div class="pills">
+          <span class="pill">Linux</span><span class="pill">Windows</span>
+          <span class="pill">macOS</span><span class="pill">AWS</span>
+          <span class="pill">Docker</span><span class="pill">Microsoft 365</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTS ===================== -->
+  <section id="certs">
+    <h2>certifications</h2>
+    <div class="cert-row">
+      <div class="cert">CompTIA Security+ ce <span class="stat">active</span></div>
+      <div class="cert">CompTIA A+ ce <span class="stat">active</span></div>
+      <div class="cert">C·CURE 9000 System Installer / Maintainer <span class="stat">active</span></div>
+      <div class="cert">HUGS Enterprise Infrastructure Deployment - CIE <span class="stat">active</span></div>
+      <div class="cert">National & Virginia EMT <span class="stat">active</span></div>
+      <div class="cert dim">CompTIA Network+ <span class="stat">in progress</span></div>
+      <div class="cert dim">eJPT - Junior Penetration Tester <span class="stat">queued</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== BLOG TEASERS ===================== -->
+  <section id="writing">
+    <h2>recent posts <span class="meta">tail -n 2 ./blog</span></h2>
+    <div class="grid post-list" id="post-list">
+      <!-- populated by script.js from posts/index.json -->
+    </div>
+    <div style="margin-top:14px"><a href="blog.html">read all posts →</a></div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact">
+    <h2>contact</h2>
+    <p class="dim">recruiters, collaborators, fellow CTF players - pick a channel.</p>
+    <div class="row">
+      <a class="btn" href="mailto:Aalap421@gmail.com">email</a>
+      <a class="btn cyan" href="https://www.linkedin.com/in/aalapshah421/" target="_blank" rel="noopener">linkedin</a>
+      <a class="btn dim" href="https://github.com/aalap-shah421" target="_blank" rel="noopener">github</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>cd ~ &nbsp;·&nbsp; built with html/css and too much coffee</div>
+    <div>last updated: <span class="last-updated" id="last-updated">2026-05-05</span></div>
+    <div class="dim">// somewhere on this site there's a flag. happy hunting.</div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

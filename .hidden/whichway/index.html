@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>stage 3 - which way</title>
+<link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+<main class="terminal-page">
+  <h1>stage 3 / 4 - which way</h1>
+  <p class="dim">[ depth: 3, looking good ]</p>
+
+  <p>you've decoded base64, you've inspected the DOM, you've decoded hex. respect.</p>
+
+  <p>one more layer. the ciphertext below uses one of the oldest substitution ciphers there is. solve it for the URL of the final stage:</p>
+
+  <pre class="ascii">
+lbh znqr vg gb fgntr 4. gur svany hey vf
+/frperg/svanyobff.ugzy. jura nfxrq sbe gur
+synt fhozvg: NNYNC{crefvfgrapr_cnlf_yhapu}.
+ab shegure rapbqvat arrqrq. tb pynvz lbhe yhapu.
+  </pre>
+
+  <p style="margin-top:18px"><button class="btn cyan" id="hint-btn">show hint</button></p>
+  <div id="hints" style="margin-top:14px; display:none">
+    <p class="dim">[hint 1] the cipher shifts each letter by a fixed amount. case is preserved. digits and punctuation aren't touched.</p>
+    <p class="dim">[hint 2] the shift is 13. a → n, b → o, c → p, ... applying the same operation twice returns the original. it's its own inverse.</p>
+    <p class="dim">[hint 3] this is ROT13. paste the block into any ROT13 decoder, or in your head: shift each letter back by 13.</p>
+  </div>
+
+  <p style="margin-top:24px"><a href="../../">← back to home</a></p>
+</main>
+
+<script>
+document.getElementById("hint-btn").addEventListener("click", () => {
+  const h = document.getElementById("hints");
+  h.style.display = h.style.display === "none" ? "block" : "none";
+});
+</script>
+</body>
+</html>

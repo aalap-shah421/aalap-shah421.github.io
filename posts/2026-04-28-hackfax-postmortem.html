@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HackFax × PatriotHacks post-mortem - Aalap Shah</title>
+<link rel="stylesheet" href="../style.css" />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0e0d'/><text x='8' y='44' font-family='monospace' font-size='32' fill='%234ade80'>%26gt;_</text></svg>" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+    <div class="path">guest@aalap.sh: <span>~/blog/2026-04-28</span></div>
+    <nav class="nav">
+      <a href="../index.html#about">about</a>
+      <a href="../index.html#projects">projects</a>
+      <a href="../blog.html" class="active">blog</a>
+      <a href="../index.html#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="post-body">
+    <h1>HackFax × PatriotHacks: building Mason's biggest CTF</h1>
+    <div class="post-meta">2026-04-28 · 6 min read · ctf · leadership · web-security</div>
+
+    <p>
+      Three years ago I showed up to HackFax as a participant. I solved 50 challenges, got
+      humbled by an OSINT track that required reading a Russian PDF, and went home thinking
+      "next year I want to write one of these." This year I led the team that wrote 30+ of them.
+      Here's what I learned.
+    </p>
+
+    <h2>The arc</h2>
+    <p>
+      <strong>2024:</strong> participant. Solved 50 across OSINT, Cyber Principles, Web Attacks.
+      <br><strong>2025:</strong> challenge developer in the Web Attack category.
+      <br><strong>2026:</strong> Web Attack lead. 11 designers under me. Six months of build.
+      30 challenges shipped. Mason's biggest CTF to date.
+    </p>
+
+    <h2>What worked</h2>
+    <ul>
+      <li>
+        <strong>Difficulty calibration in pairs.</strong> Every challenge got a "second
+        attacker" before going live - someone outside the original author's head who tried to
+        solve it cold. Caught roughly a third of our broken intent ratios.
+      </li>
+      <li>
+        <strong>A shared "dirty tricks" doc.</strong> One Notion page with every cheap trick
+        we agreed not to use (zero-width chars in flags, off-by-one in regex, hidden-by-CSS
+        clues). Saved us from a lot of "this is unfair" tickets.
+      </li>
+      <li>
+        <strong>Infrastructure-as-code from day one.</strong> Each challenge was a Docker
+        Compose file in a repo. Deploy was push-button. Rollback was push-button. We never
+        spent a Saturday morning SSH'd into prod fixing things.
+      </li>
+    </ul>
+
+    <h2>What I'd change next time</h2>
+    <ul>
+      <li>
+        <strong>More testers, earlier.</strong> Half our late-stage bugs came from "the only
+        person who tried this challenge was the author."
+      </li>
+      <li>
+        <strong>Fewer cute tricks.</strong> A challenge that takes 90 minutes because the
+        intended path is brilliant feels great when you solve it and miserable when you don't.
+        The good ones reward thought, not pattern-matching to the author's sense of humor.
+      </li>
+      <li>
+        <strong>Clearer hint economy.</strong> We launched without a hint system, then bolted
+        one on Saturday afternoon. Should have shipped one from the start with cost-per-hint
+        balanced against challenge points.
+      </li>
+    </ul>
+
+    <h2>What it taught me about security work</h2>
+    <p>
+      The thing I didn't expect: leading a CTF made me a better defender. When you've spent
+      six months thinking about <em>how</em> to hide a flag in a deliberately broken auth
+      flow, you start seeing the same shapes in real production code. Most of the bugs I've
+      caught at work since then are things that would've been a 200-point challenge.
+    </p>
+
+    <blockquote>
+      The best CTF challenge is one that teaches you to recognize a class of bug, not just
+      to solve a puzzle.
+    </blockquote>
+
+    <p>
+      Big shoutout to the Cybersecurity GMU board and the 11 challenge designers who built
+      this with me. See you in 2027.
+    </p>
+
+    <p class="dim" style="margin-top:32px">- Aalap</p>
+    <p style="margin-top:24px"><a href="../blog.html">← back to blog</a></p>
+  </article>
+</main>
+</body>
+</html>

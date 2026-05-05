@@ -1,0 +1,12 @@
+# aalap.sh - robots.txt
+# (you read this. nice. that's already a clue.)
+
+User-agent: *
+Allow: /
+Disallow: /drafts/
+
+# crawlers ignore comments. humans don't.
+# stage 1/4 - the trail begins. your next stop:
+#   /.well-known/whoami.txt
+#
+# (yes, dotfiles are served. yes, you can just go there.)

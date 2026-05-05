@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 - not found</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<main class="terminal-page">
+  <h1>404 - file not found</h1>
+  <pre class="ascii">
+$ ls -la "$REQUESTED_PATH"
+ls: cannot access: No such file or directory
+$ exit 1
+  </pre>
+  <p>this URL doesn't exist on this server.</p>
+  <p class="dim">// if you were following the CTF trail, double-check the path you decoded.</p>
+  <p class="dim">// if you weren't, that trail starts at <a href="/robots.txt">/robots.txt</a>. lunch is on the line.</p>
+  <p style="margin-top:24px"><a href="/">← back to home</a></p>
+</main>
+</body>
+</html>
