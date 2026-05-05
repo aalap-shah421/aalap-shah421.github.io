@@ -8,11 +8,19 @@
     "read": "4 min"
   },
   {
-    "slug": "2026-04-28-hackfax-postmortem",
-    "title": "HackFax × PatriotHacks: building Mason's biggest CTF",
-    "date": "2026-04-28",
+    "slug": "2026-02-17-hackfax-postmortem",
+    "title": "HackFax x PatriotHacks 2026: post-mortem",
+    "date": "2026-02-17",
     "tags": ["ctf", "leadership", "web-security"],
-    "excerpt": "30+ Web Attack challenges. 11 challenge designers. 6 months of late nights. What I learned leading the largest CTF GMU has ever run.",
-    "read": "6 min"
+    "excerpt": "30 Web Attack challenges. ~10 designers. Six months of build. The Valentine's Day CTF arc - what worked, what I would change, what it taught me about defending real code.",
+    "read": "7 min"
+  },
+  {
+    "slug": "2026-02-14-live-from-hackfax",
+    "title": "Live from HackFax, Saturday afternoon",
+    "date": "2026-02-14",
+    "tags": ["ctf", "live"],
+    "excerpt": "It's 3pm Saturday and the CTF has been live for four hours. Quick write-up from the corner of Horizon 1008 between resetting a deployment and answering questions.",
+    "read": "3 min"
   }
 ]
