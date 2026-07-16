@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>stuck: my fake SSH banner drops bots in a second - Aalap Shah</title>
+<link rel="stylesheet" href="../style.css" />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0e0d'/><text x='8' y='44' font-family='monospace' font-size='32' fill='%234ade80'>%26gt;_</text></svg>" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+    <div class="path">guest@aalap.sh: <span>~/blog/2026-07-10</span></div>
+    <nav class="nav">
+      <a href="../index.html#about">about</a>
+      <a href="../index.html#projects">projects</a>
+      <a href="../blog.html" class="active">blog</a>
+      <a href="../index.html#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="post-body">
+    <h1>stuck: my fake SSH banner drops bots in a second</h1>
+    <div class="post-meta">2026-07-10 · 3 min read · honeypots · stuck</div>
+
+    <p>
+      Been working on HoneyJar this week (a small honeypot I want to drop on a $5 VPS
+      to collect weird internet traffic). The idea is simple. Open some ports, log
+      everything that hits them, ship structured events to a Discord webhook. Cheap,
+      low touch, useful for playing with detection ideas.
+    </p>
+
+    <p>
+      The SSH listener is where I am stuck.
+    </p>
+
+    <p>
+      Almost all real traffic hitting port 22 on the open internet is bots. They
+      connect, send their version string (something like <code>SSH-2.0-libssh_0.10.4</code>),
+      wait maybe 50ms for my server to do the SSH key exchange, and then drop the
+      connection the moment I do not respond correctly. I am logging thousands of
+      "connected, sent 22 bytes, disconnected" events. That is not useful. What I
+      want is the commands they try to run after they think they are in.
+    </p>
+
+    <h2>what I have tried</h2>
+
+    <p>
+      <strong>1. Just accept the TCP, read whatever comes in.</strong> Gets the version
+      string. Nothing else. 90% of events look identical.
+    </p>
+
+    <p>
+      <strong>2. Send back a matching banner.</strong> I return
+      <code>SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1\r\n</code>. Same result. The bot
+      wants me to actually respond to the SSH KEX_INIT packet next, and I do not, so
+      it hangs up.
+    </p>
+
+    <p>
+      <strong>3. Read Cowrie's source code.</strong> Cowrie is a real medium-interaction
+      SSH honeypot. It fakes the entire SSH protocol using Twisted and Conch, and it
+      works. But it is a lot of Twisted for something I wanted to keep small. Cowrie's
+      requirements alone are heavier than my whole HoneyJar concept.
+    </p>
+
+    <h2>where I am</h2>
+
+    <p>
+      I think there are two honest options and I have not picked one yet.
+    </p>
+
+    <p>
+      Option A: wrap paramiko or Twisted Conch, fake just enough of the SSH KEX to
+      trick the bot into sending its command, log it, close the connection. This gets
+      me what I want but drags in a big dependency and a real chunk of protocol code
+      I do not fully understand yet.
+    </p>
+
+    <p>
+      Option B: accept that HoneyJar is not supposed to be a full SSH honeypot. Let it
+      be a "port 22 attempt logger" that tracks who is knocking, and if I want the
+      actual command capture, I run a real Cowrie next to it. Two tiers. HoneyJar spots
+      the noise volume, Cowrie captures the interesting bits.
+    </p>
+
+    <p>
+      Right now I am leaning toward B. HoneyJar's whole pitch was "small and easy to
+      deploy," and turning it into a mini-Cowrie kills that. But I keep coming back to
+      the idea that maybe I could get 80% of Cowrie in ~300 lines of asyncio and
+      paramiko, and that would be a fun weekend project on its own.
+    </p>
+
+    <h2>if you have done this</h2>
+
+    <p>
+      If you have built a low-footprint SSH honeypot that actually gets past the version
+      handshake without pulling in Twisted, I would love to hear how. Or if you have
+      opinions on the two-tier approach, tell me I am wrong (or right).
+      <a href="mailto:aalap421+contactme@gmail.com">say hi</a>.
+    </p>
+
+    <p>
+      Either way, I will write a follow-up when I actually ship whichever version wins.
+    </p>
+
+    <p class="dim" style="margin-top:32px">- Aalap</p>
+    <p style="margin-top:24px"><a href="../blog.html">← back to blog</a></p>
+  </article>
+</main>
+</body>
+</html>
