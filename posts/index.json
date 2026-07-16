@@ -1,5 +1,13 @@
 [
   {
+    "slug": "2026-07-10-stuck-on-ssh-banner",
+    "title": "stuck: my fake SSH banner drops bots in a second",
+    "date": "2026-07-10",
+    "tags": ["honeypots", "stuck"],
+    "excerpt": "Working on HoneyJar and my SSH listener is basically useless. Real SSH bots hang up the second I don't respond to KEX_INIT correctly. Two options, neither of them clean, still figuring it out.",
+    "read": "3 min"
+  },
+  {
     "slug": "2026-05-05-final-season-at-mason",
     "title": "Final season at Mason: what I'm shipping before finals",
     "date": "2026-05-05",
